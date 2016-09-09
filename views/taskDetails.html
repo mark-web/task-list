@@ -1,0 +1,31 @@
+<a href="#/" class="btn btn-success">Back to tasks list</a>
+
+<h1 class="panel-heading">Task name: {{task.name}}</h1>
+<input class="title-task" type="text" contentEditable="true" ng-model="name"/><button class="edit btm btn-warning" ng-show="goButt" ng-click="edit()">Edit</button>
+<table class="table table-bordered table-hover panel-body">
+	<tr>
+		<th>Name</th>
+		<th>Description</th>
+		<th>Tags</th>
+		<th>Actual effort</th>
+		<th>Estimated effort</th>
+		<th>Due date</th>
+	</tr>
+	<tr>
+		<td>
+			<span editable-text="task.name" onaftersave="updateTask()">{{task.name}}</span>
+		</td>
+		<td>{{task.description}}</td>
+		<td>
+			<span ng-repeat="tag in task.tags">{{tag}} </span>
+		</td>
+		<td>{{task.actual_effort}}</td>
+		<td>{{task.estimated_effort}}</td>
+		<td>{{task.due_date | date:'yyyy-MM-dd H:m'}}</td>
+	</tr>
+</table>
+
+<div class="panel-footer"></div>
+
+
+

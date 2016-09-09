@@ -1,0 +1,18 @@
+<div class="panel-heading">Task List</div>
+<table class="table table-bordered table-hover panel-body text-center" >
+	<tr>
+		<th>Название задачи</th>
+		<th>Теги</th>
+		<th>Потраченное время</th>
+		<th>Общая оценка</th>
+		<th>Дата окончания</th>
+	</tr>
+	<tr ng-repeat="task in tasks | filter:{obj_status:'active'}" ng-class="task.is_high_priority ? 'danger' : ''">
+		<td><h5><a href="#/task-info-{{$index}}">{{task.name}}</a></h5></td>
+		<td><span ng-repeat="infoTag in task.tags"><div>{{infoTag}}</div> </span></td>
+		<td><p>{{task.actual_effort}}</p></td>
+		<td><p>{{task.estimated_effort}}</p></td>
+		<td><p>{{task.due_date |  date:'yyyy-MM-dd H:m'}}</p></td>
+	</tr>
+</table>
+<div class="panel-footer"></div>

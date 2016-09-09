@@ -1,0 +1,28 @@
+.container {
+    padding-top: 20px;
+}
+.left_2{
+	margin-left: 2%;
+}
+.right{
+	text-align: right;
+}
+.bold{
+	font-weight: bold;
+}
+
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+}
+.loader-content {
+    width: 128px;
+    height: 128px;
+    overflow: auto;
+    margin: auto;
+    z-index: 10;
+    top: 0; 
+    right: 0;
+}
